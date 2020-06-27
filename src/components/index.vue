@@ -1,16 +1,18 @@
 <template>
   <v-container>
     <v-row class="text-center">
-      <v-col cols="12">
-        <v-carousel hide-delimiters>
-          <v-carousel-item
+      <v-col>
+        <v-carousel>
+          <v-carousel-item 
             v-for="(item,i) in items"
-            :key="i"
-            :src="item.src">
+              :key="i" 
+              :src="item.src"
+            >
+            
           </v-carousel-item>
         </v-carousel>
       </v-col>
-
+      
       <v-col cols="12">
         <v-img
           :src="require('../assets/logo.svg')"
@@ -93,6 +95,7 @@
             class="subheading mx-3"
             target="_blank"
           >
+          
             {{ eco.text }}
           </a>
         </v-row>
@@ -103,7 +106,7 @@
 
 <script>
   export default {
-    name: 'HelloWorld',
+    name: 'index',
 
     data: () => ({
       ecosystem: [
@@ -142,6 +145,20 @@
           href: 'https://medium.com/vuetify',
         },
       ],
+      items: [
+          {
+            src: require('../assets/construction1.jpg'),
+          },
+          {
+            src: require('../assets/surveying.jpg'),
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+          },
+        ],
       whatsNext: [
         {
           text: 'Explore components',

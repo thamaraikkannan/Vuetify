@@ -1,21 +1,27 @@
 <template>
   <v-app>
     <navType/>
+    <headerType/>
     <v-content>
-      <HelloWorld/>
+      <index/>
     </v-content>
+    <footerType/>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import index from './components/index';
 import navType from './components/nav';
+import headerType from './components/header';
+import footerType from './components/footer';
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    index,
     navType,
+    headerType,
+    footerType,
   },
 
   data: () => ({
